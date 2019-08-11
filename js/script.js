@@ -21,12 +21,12 @@ function displayMatches() {
         return `
                 <li class="result">
                     <img src="${superHero.images.sm}"
-                    <p class="name">${superHero.name}</p>
+                    <span class="name">${superHero.name}</span>
                     <div class="stats">
-                    <span>Intelligence:${superHero.powerstats.intelligence}</span>
-                    <span>Strength:${superHero.powerstats.strength}</span>
-                    <span>Speed:${superHero.powerstats.speed}</span>
-                    <span>Combat:${superHero.powerstats.combat}</span>
+                        <span>Intelligence:${superHero.powerstats.intelligence}</span>
+                        <span>Strength:${superHero.powerstats.strength}</span>
+                        <span>Speed:${superHero.powerstats.speed}</span>
+                        <span>Combat:${superHero.powerstats.combat}</span>
                     </div>
 
                 </li>

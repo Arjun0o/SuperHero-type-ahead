@@ -9,7 +9,6 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    padding: 1rem;
 }
 
 .search-form {
@@ -44,8 +43,7 @@ input.search {
     list-style: none;
     color: antiquewhite;
     padding: 1rem;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     text-transform: uppercase;
     border: 1px solid #eee9e9;
     margin-top: 0.2rem;
@@ -66,13 +64,13 @@ input.search {
 
 .result {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3.5rem;
-    justify-items: space-around;
     align-items: center;
 }
 
 .result img {
+    display: block;
     width: 4rem;
     height: 6rem;
     max-width: 4rem;
