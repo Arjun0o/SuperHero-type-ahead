@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.search-form {
+    min-width: 23rem;
+    margin: 5rem;
+    max-width: 38rem;
+}
+
+input {
+    width: 100%;
+    padding: 1.3rem;
+}
+
+input.search {
+    margin: 0;
+    text-align: center;
+    border: none;
+    outline: none;
+    letter-spacing: 0.1rem;
+    border: 0.3rem solid rgba(49, 79, 79, 0.8);
+    border-radius: 0.3rem;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0 0 5px rgba(179, 128, 128, 1), inset 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.suggestions li {
+    width: 100%;
+    outline: none;
+    background: rgba(0, 0, 0, 0.9);
+    list-style: none;
+    color: antiquewhite;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    border: 1px solid #eee9e9;
+    margin-top: 0.2rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.suggestions li:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg);
+    background: linear-gradient(to bottom, #000 50%, #708090 100%);
+}
+
+.suggestions li:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg);
+    background: linear-gradient(to top, #000 50%, #708090 100%);
+}
+
+.result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.5rem;
+    justify-items: space-around;
+    align-items: center;
+}
+
+.result img {
+    width: 4rem;
+    height: 6rem;
+    max-width: 4rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px white;
+}
+
+.stats span {
+    display: block;
+    font-size: 0.8rem;
+    color: yellowgreen;
+    font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+    .search-form {
+        min-width: 20rem;
+        margin: 2rem;
+    }
+
+    .result {
+        grid-gap: 1.4rem;
+    }
+
+    .suggestions li {
+        font-size: 0.7rem;
+    }
+
+    .result img {
+        width: 3rem;
+        height: 4rem;
+    }
+
+    .stats span {
+
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 650px) {
+    .search-form {
+        min-width: 30rem;
+        margin: 2rem;
+    }
+
+    .result {
+        grid-gap: 3rem;
+    }
+
+    .suggestions li {
+        font-size: 1rem;
+    }
+
+    .result img {
+        width: 3.5rem;
+        height: 4.5rem;
+    }
+
+    .stats span {
+
+        font-size: 0.8rem;
+    }
+}
